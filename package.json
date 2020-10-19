@@ -1,6 +1,6 @@
 {
   "name": "fangweb.dev",
-  "description": "TODO",
+  "description": "The personal domain of Fang",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
