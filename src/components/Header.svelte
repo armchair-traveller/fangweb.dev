@@ -24,6 +24,9 @@
     padding: 0;
     height: 100%;
   }
+  .menu:hover {
+    background-color: #eee;
+  }
   .line {
     fill: none;
     stroke: black;
@@ -58,6 +61,13 @@
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
+
+  menu {
+    display: none;
+  }
+  .menu-active {
+    display: block;
+  }
 </style>
 
 <header>
@@ -76,3 +86,5 @@
     </svg>
   </button>
 </header>
+
+<menu class:menu-active={opened}><a href="projects">Projects</a></menu>
