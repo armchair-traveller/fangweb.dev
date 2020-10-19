@@ -1,4 +1,5 @@
 <script>
+  import { fly } from "svelte/transition";
   var opened = false;
 </script>
 
@@ -68,6 +69,9 @@
   .menu-active {
     display: block;
   }
+  a {
+    text-decoration: none;
+  }
 </style>
 
 <header>
@@ -87,4 +91,8 @@
   </button>
 </header>
 
-<menu class:menu-active={opened}><a href="projects">Projects</a></menu>
+{#if opened}
+  <menu class="menu-active" transition:fly={{ y: -30, duration: 200 }}>
+    <a href="projects">Projects</a>
+  </menu>
+{/if}
