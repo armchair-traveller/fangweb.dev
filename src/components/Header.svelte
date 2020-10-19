@@ -64,13 +64,13 @@
   }
 
   menu {
-    display: none;
+    display: flex;
+    flex-flow: column;
   }
-  .menu-active {
-    display: block;
-  }
-  a {
+  menu a {
     text-decoration: none;
+    padding-bottom: 1rem;
+    font-weight: 600;
   }
 </style>
 
@@ -92,7 +92,8 @@
 </header>
 
 {#if opened}
-  <menu class="menu-active" transition:fly={{ y: -30, duration: 200 }}>
+  <menu transition:fly={{ y: -30, duration: 200 }}>
     <a href="projects">Projects</a>
+    <a href="#">GitHub</a>
   </menu>
 {/if}
