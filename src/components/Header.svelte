@@ -1,5 +1,5 @@
 <style>
-  nav {
+  header {
     margin-top: 2rem;
     padding: 0 1.5rem;
   }
@@ -9,6 +9,6 @@
   }
 </style>
 
-<nav>
+<header>
   <h1>Fang🦁</h1>
-</nav>
+</header>

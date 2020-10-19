@@ -1,8 +1,8 @@
 <!-- Layout is for any layout components like Nav. 
   Similar to layout in Gatsby, present on all pages -->
 <script>
-  import Nav from "../components/Nav.svelte";
+  import Header from "../components/Header.svelte";
 </script>
 
-<Nav />
+<Header />
 <slot />
