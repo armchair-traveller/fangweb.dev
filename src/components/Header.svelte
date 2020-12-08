@@ -1,5 +1,5 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { slide } from "svelte/transition";
   var opened = false;
 </script>
 
@@ -41,7 +41,7 @@
   class="mt-8 px-6 flex flex-nowrap flex-row justify-between items-center">
   <a class="font-semibold text-xl" href="/">Fang🦁</a>
   <button
-    class="bg-transparent border-none cursor-pointer flex p-0 h-full hover:bg-gray-100"
+    class="bg-transparent border-none cursor-pointer flex p-0 h-full hover:bg-gray-100 md:hidden"
     class:opened
     aria-expanded={opened}
     on:click={() => (opened = !opened)}
@@ -56,7 +56,7 @@
 </header>
 
 {#if opened}
-  <menu class="flex flex-col" transition:fly={{ y: -30, duration: 200 }}>
+  <menu class="flex flex-col mb-0" transition:slide={{ y: -30, duration: 200 }}>
     <a href="#">Projects</a>
     <a rel="external" href="https://github.com/armchair-traveller">GitHub</a>
   </menu>
