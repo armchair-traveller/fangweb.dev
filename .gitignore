@@ -1,9 +1,12 @@
 .DS_Store
-/node_modules/
-/src/node_modules/@sapper/
-yarn-error.log
-/cypress/screenshots/
-/__sapper__/
-public
-.netlify
+node_modules
+/.svelte
+/build
+/public
 .env
+.vscode
+yarn-error.log
+/functions/render
+
+# Netlify
+.netlify
