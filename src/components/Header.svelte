@@ -4,31 +4,7 @@
 </script>
 
 <style>
-  header {
-    margin-top: 2rem;
-    padding: 0 1.5rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo {
-    font-weight: 600;
-    font-size: 1.25rem;
-    text-decoration: none;
-  }
   /* Burger */
-  .menu {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    padding: 0;
-    height: 100%;
-  }
-  .menu:hover {
-    background-color: #eee;
-  }
   .line {
     fill: none;
     stroke: black;
@@ -55,21 +31,17 @@
     stroke-dashoffset: -30;
   }
 
-  menu {
-    display: flex;
-    flex-flow: column;
-  }
   menu a {
-    text-decoration: none;
     padding-bottom: 1rem;
     font-weight: 600;
   }
 </style>
 
-<header>
-  <a class="logo" href="/">Fang🦁</a>
+<header
+  class="mt-8 px-6 flex flex-nowrap flex-row justify-between items-center">
+  <a class="font-semibold text-xl" href="/">Fang🦁</a>
   <button
-    class="menu"
+    class="bg-transparent border-none cursor-pointer flex p-0 h-full hover:bg-gray-100"
     class:opened
     aria-expanded={opened}
     on:click={() => (opened = !opened)}
@@ -84,7 +56,7 @@
 </header>
 
 {#if opened}
-  <menu transition:fly={{ y: -30, duration: 200 }}>
+  <menu class="flex flex-col" transition:fly={{ y: -30, duration: 200 }}>
     <a href="#">Projects</a>
     <a rel="external" href="https://github.com/armchair-traveller">GitHub</a>
   </menu>
