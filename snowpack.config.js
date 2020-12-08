@@ -3,7 +3,8 @@ module.exports = {
   buildOptions: {
     souceMaps: true,
   },
-  extends: "@sveltejs/snowpack-config",
+  plugins: [["@snowpack/plugin-build-script", { "cmd": "postcss", "input": [".css", ".pcss"], "output": [".css"] }]],
+	extends: "@sveltejs/snowpack-config",
   mount: {
     "src/components": "/_components",
   },
