@@ -12,9 +12,10 @@
     justify-content: space-between;
     align-items: center;
   }
-  h1 {
+  .logo {
     font-weight: 600;
     font-size: 1.25rem;
+    text-decoration: none;
   }
   /* Burger */
   .menu {
@@ -75,7 +76,7 @@
 </style>
 
 <header>
-  <h1>Fang🦁</h1>
+  <a class="logo" href="/">Fang🦁</a>
   <button
     class="menu"
     class:opened
@@ -93,7 +94,7 @@
 
 {#if opened}
   <menu transition:fly={{ y: -30, duration: 200 }}>
-    <a href="projects">Projects</a>
-    <a href="#">GitHub</a>
+    <a href="#">Projects</a>
+    <a rel="external" href="https://github.com/armchair-traveller">GitHub</a>
   </menu>
 {/if}
