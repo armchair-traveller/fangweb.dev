@@ -2,4 +2,10 @@
 
 # fangweb.dev
 
-It'sa me
+Currently cannot deploy to Netlify due to Kit's adapter inability to build correctly.
+
+# Tech
+
+- Svelte
+- SvelteKit
+- Tailwind
